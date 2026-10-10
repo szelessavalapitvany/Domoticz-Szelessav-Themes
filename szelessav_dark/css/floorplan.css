@@ -1,0 +1,60 @@
+/**** ./floorplan.css ***/
+/* Floorplan */		
+rect#shadow {
+    rx: 5;
+    ry: 5;
+}
+
+rect.popup {
+    rx: 5;
+    ry: 5;
+    fill: #fff !important;
+}
+
+rect.header {
+    rx: 5;
+    ry: 5;
+    fill: #fff !important;
+    stroke-width: 0 !important;
+}
+
+.DeviceDetails text {
+    font-family: main-font !important;
+    fill: #1a1a1a !important;
+}
+
+.DeviceDetails text#name {
+    font-weight: bold !important;
+}
+
+.DeviceDetails text#status {
+    font-size: 100% !important;
+    fill: #0076a1 !important;
+}
+
+.DeviceDetails text#bigtext {
+    display: none;
+}
+
+g text {
+    fill: #1a1a1a !important;
+}
+
+g.selector .level-list .level path {
+    fill: #fff;
+    stroke: #fff;
+}
+
+
+image#twisty {
+    display: none;
+}
+
+.bullet {
+    border: 1px solid #0076a1 !important;
+}
+
+.bulletSelected {
+    border: 1px solid #0076a1 !important;
+    background: #0076a1 !important;
+}

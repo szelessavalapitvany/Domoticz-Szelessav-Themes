@@ -1,0 +1,86 @@
+{
+  "type": "theme",
+  "name": "szelessav_dark",
+  "description": "Szelessav custom theme",
+  "license": "GNU General Public License v3.0",
+  "version": "1.0",
+  "author": "EdddieN based on revised to Szelessav",
+  "homepage": "https://szelessavmuhely.hu",
+  "dashboard_camera_refresh": 10,
+  "logo": "logo.png",
+  "custom_url": "https://szelessavmuhely.hu",
+  "button_name": "szelessavmuhely.hu",
+  "icons": [],
+  "background_img": "",
+  "background_type": "",
+  "features": {
+    "footer_text_disabled": {
+      "id": 11,
+      "enabled": true,
+      "files": [
+        "footer.css"
+      ]
+    },
+    "higchart": {
+      "id": 14,
+      "enabled": true,
+      "files": [
+        "szelessav_hightchart_dark.css"
+      ]
+    },
+    "time_ago": {
+      "id": 16,
+      "enabled": true,
+      "files": []
+    },
+    "custom_page_menu": {
+      "id": 17,
+      "enabled": false,
+      "files": [
+        "custom_page.js"
+      ]
+    },
+    "switch_instead_of_bigtext": {
+      "id": 20,
+      "enabled": true,
+      "files": [
+        "switch.js",
+        "switch.css"
+      ]
+    },
+    "switch_instead_of_bigtext_scenes": {
+      "id": 22,
+      "enabled": true,
+      "files": []
+    },
+    "notification": {
+      "id": 29,
+      "enabled": true,
+      "files": []
+    },
+    "dashboard_camera": {
+      "id": 31,
+      "enabled": true,
+      "files": [
+        "dashboard_camera.js",
+        "dashboard_camera.css"
+      ]
+    },
+    "icon_image": {
+      "id": 32,
+      "enabled": false,
+      "files": []
+    },
+    "dashboard_camera_section": {
+      "id": 36,
+      "enabled": true,
+      "files": []
+    },
+    "wind_direction": {
+      "id": 38,
+      "enabled": true,
+      "files": []
+    }
+  },
+  "szelessav_firmware": false
+}
