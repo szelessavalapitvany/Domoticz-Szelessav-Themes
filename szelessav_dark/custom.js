@@ -9,8 +9,8 @@ $.ajax({
 });
 
 var themeFolder = 'szelessav_dark';
-var lang = 'hu';
-var language = 'hu';
+var lang = $.i18n.lng();
+var language = lang;
 $.when(
 	$.getScript("styles/szelessav_dark/js/themesettings.js"),
 	$.getScript("styles/szelessav_dark/js/functions.js"),
