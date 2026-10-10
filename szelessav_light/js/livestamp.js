@@ -27,7 +27,7 @@
     timestamp = moment(timestamp);
     if (moment.isMoment(timestamp) && !isNaN(+timestamp)) {
       var newData = $.extend({ }, { 'original': $el.contents() }, oldData);
-      newData.moment = moment(timestamp);
+      newData.moment = moment(timestamp).locale($.i18n.lng());
 
       $el.data('livestampdata', newData).empty();
       $livestamps.push($el[0]);
