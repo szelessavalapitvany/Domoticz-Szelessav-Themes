@@ -102,7 +102,7 @@ function setAllDevicesIconsStatus() {
     $("div.item.statusTimeout").each(function() {
         if ($(this).find("#name > i.ion-ios-wifi").length === 0) {
             if (theme.features.notification.enabled === true) {
-                generate_noty('warning', "Sensor " + $(this).find('#name').text() + " " + language.is + " " + language.timedout, 4000);
+                generate_noty('warning', "Sensor " + $(this).find('#name').text() + " " + $.t("is") + " " + $.t("timed out"), 4000);
             }
             $(this).find("#name").prepend("<i class='ion-ios-wifi blink warning-text' title='" + $.t("Sensor Timeout") + "'></i>&nbsp;");
         }
