@@ -9,6 +9,8 @@
 @import url("css/floorplan.css");
 @import url("css/animate.css");
 
+/* Mobile sidebar navigation | Mobil oldalsó navigáció */
+@import url("css/sidemenu.css") screen and (max-width: 979px);
 
 /* ionicons */
 @import url("css/ionicons.min.css");
