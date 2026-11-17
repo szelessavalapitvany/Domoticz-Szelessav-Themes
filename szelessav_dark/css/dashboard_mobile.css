@@ -47,7 +47,7 @@ body.dashMobile table.mobileitem th:last-child a {
 }
 
 body.dashMobile table.mobileitem tr {
-    background: #fff;
+    background: #ccc;
     display: flex;
     flex-grow: 1;
     flex-direction: row;
@@ -122,7 +122,57 @@ body.dashMobile table.mobileitem td.status {
 	overflow: auto;
 	width: 50px;
 }
+/* Mobile Utility */
+@media (max-width: 767px) {
 
+	body.dashMobile #dashUtility table.mobileitem > thead,
+	body.dashMobile #dashUtility table.mobileitem > thead > tr {
+		display: flex;
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+
+	#topBar {
+		margin: 10px 0 20px;
+	}
+
+	body.dashMobile #dashUtility table.mobileitem,
+	body.dashMobile #dashUtility table.mobileitem > tbody {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		box-sizing: border-box;
+	}
+
+	body.dashMobile #dashUtility table.mobileitem > tbody > tr {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		height: auto;
+		box-sizing: border-box;
+	}
+
+	body.dashMobile #dashUtility table.mobileitem > tbody > tr > td {
+		width: auto;
+		max-width: 100%;
+		min-width: 0;
+		height: auto;
+		flex: 0 1 auto;
+		box-sizing: border-box;
+	}
+
+	body.dashMobile #dashUtility table.mobileitem > tbody > tr > td#status {
+		margin-left: auto;
+		justify-content: flex-end;
+		text-align: right;
+	}
+}
 body.dashMobile table.mobileitem .status > span > span {
     margin-right: 7px;
 }

@@ -3,7 +3,7 @@
   "name": "szelessav_dark",
   "description": "Szelessav custom theme",
   "license": "GNU General Public License v3.0",
-  "version": "1.0",
+  "version": "1.1",
   "author": "EdddieN based on revised to Szelessav",
   "homepage": "https://szelessavmuhely.hu",
   "dashboard_camera_refresh": 10,
@@ -82,5 +82,5 @@
       "files": []
     }
   },
-  "szelessav_firmware": false
+  "szelessav_firmware": true
 }
