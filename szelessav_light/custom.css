@@ -396,7 +396,7 @@ div.bannercontent .row.divider {
     display: block;
     margin: 0;
     padding: 0;
-    max-width: 370px;
+    width: 370px;
     height: 100%;
 }
 
@@ -527,7 +527,7 @@ div.bannercontent .row.divider {
     justify-self: left;
     align-self: center;
     padding-right: 20px;
-    width: 300px;
+    width: 280px;
     font-size: 0;
 }
 
@@ -1926,3 +1926,190 @@ html:not(.szelessav-firmware) .brand h2 {
     display: none !important;
 }
 
+/* Domoticz 2026 login */
+#canvas-login {
+	display: none !important;
+}
+/* Domoticz 2026 login - centered panel */
+#canvas-login + .glass-container {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	min-height: 100dvh;
+	box-sizing: border-box;
+}
+
+#canvas-login + .glass-container > center {
+	width: 100%;
+}
+
+#canvas-login + .glass-container .glass-card {
+	margin: 0 auto;
+}
+/* Domoticz 2026 login - input fields */
+#canvas-login + .glass-container input.glass-input {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 44px;
+	margin-bottom: 10px;
+	padding: 10px 8px;
+	background: #fff;
+	color: #1a1a1a;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+#canvas-login + .glass-container input.glass-input:focus {
+	border-bottom-color: #00759f;
+	outline: none;
+	box-shadow: none;
+}
+/* Domoticz 2026 login - Remember me */
+#canvas-login + .glass-container .remember-row,
+#canvas-login + .glass-container .remember-row label {
+	color: #1a1a1a !important;
+	text-shadow: none;
+}
+/* Domoticz 2026 login - button */
+#canvas-login + .glass-container .btn-modern {
+	display: block;
+	width: 120px !important;
+	margin: 12px auto 0;
+	padding: 10px 15px !important;
+	background: #00759f !important;
+	color: #fff !important;
+	border: none !important;
+	border-radius: 3px;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	transform: none !important;
+}
+
+#canvas-login + .glass-container .btn-modern:hover {
+	background: #005f82 !important;
+}
+/* Domoticz 2026 - Szelessav firmware login logo */
+html.szelessav-firmware #canvas-login + .glass-container .login-logo {
+	content: url("images/logo.png");
+	width: 152px !important;
+	height: 50px !important;
+	object-fit: contain;
+	margin: 0 auto 20px;
+}
+
+/* Hide factory branding in firmware mode */
+html.szelessav-firmware #canvas-login + .glass-container .login-title,
+html.szelessav-firmware #canvas-login + .glass-container .domoticz-link {
+	display: none !important;
+}
+/* Domoticz 2026 - Szelessav login panel */
+#canvas-login + .glass-container .glass-card {
+	box-sizing: border-box;
+	width: 360px;
+	max-width: calc(100vw - 32px);
+	padding: 25px 30px 40px;
+	background: #fff !important;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+/* Domoticz 2026 - login logo spacing */
+html.szelessav-firmware #canvas-login + .glass-container .login-logo {
+	margin-bottom: 45px;
+}
+/* Domoticz 2026 - Hide top navigation icons */
+.navbar .nav > li > a > i,
+.navbar .nav > li > a > .fa,
+.navbar .nav > li > a > .fas,
+.navbar .nav > li > a > .far {
+	display: none !important;
+}
+/* Domoticz 2026 - Hide dropdown menu icons */
+.navbar .dropdown-menu a > img.dz-nav-img,
+.navbar .dropdown-menu a > i.dz-nav-glyph,
+.navbar .dropdown-menu a > i.fa {
+	display: none !important;
+}
+/* Domoticz 2026 - Dashboard kapcsolok kek fejlece */
+#dashcontent .movable[id^="light_"] #itemtablesmall > tbody > tr,
+#dashcontent .movable[id^="light_"] #itemtablesmalldoubleicon > tbody > tr {
+	background-image: url("images/blue_bg.png") !important;
+}
+/* Domoticz 2026 - Dashboard category spacing */
+#holder #dashcontent > section.dashCategory {
+	margin: 0 0 16px;
+	padding: 0;
+}
+
+#holder #dashcontent > section.dashCategory > h2 {
+	margin: 0 0 8px;
+	padding: 0;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+#holder #dashcontent > section.dashCategory > .row {
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+}
+/* Domoticz 2026 - Dashboard card spacing */
+@media (min-width: 900px) {
+	#holder #dashcontent > section.dashCategory > .row {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 10px;
+	}
+
+	#holder #dashcontent > section.dashCategory > .row::before,
+	#holder #dashcontent > section.dashCategory > .row::after {
+		display: none;
+	}
+
+	#holder #dashcontent > section.dashCategory > .row > .movable {
+		float: none;
+		width: auto;
+		margin: 0;
+		min-width: 0;
+	}
+}
+/* Domoticz 2026 - Temperature card headers */
+#holder #dashcontent #dashTemp #itemtablesmall > tbody > tr {
+	background-image: url("images/red_bg.png") !important;
+}
+/* Domoticz 2026 - Kapcsolók fejléc */
+#lightcontent .item tr {
+	background-image: linear-gradient(
+		to bottom,
+		#00769c 0px,
+		#00769c 30px,
+		transparent 30px
+	);
+}
+/* Domoticz 2026 - Kapcsolók kártyáinak térköze */
+#lightcontent .item.span4, #utilitycontent .item.span4 {
+	margin-left: 8px !important;
+	margin-right: 8px !important;
+	margin-bottom: 8px !important;
+}
+/* Domoticz 2026 - duplikált kedvencek gomb elrejtése */
+.itemBlock .options .fa-star {
+	display: none !important;
+}
+/* Domoticz 2026 - Adatbázis mentés/helyreállítás szövegszínek */
+#dbsize_display,
+#dbfreesize_display,
+span[style*="color:#fff"][style*="font-weight:bold"] {
+	color: #333 !important;
+}
+/* Domoticz 2026 - redõnyök duplikált vezérlõikonjainak elrejtése */
+#itemtablesmalldoubleicon .dz-blind-glyph,
+#itemtabledoubleicon .dz-blind-glyph {
+	display: none !important;
+}

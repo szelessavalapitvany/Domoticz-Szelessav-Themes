@@ -98,6 +98,7 @@ function init_theme() {
                 $("#main-view").children("div.container").removeClass("container").addClass("container-fluid");
                 removeRowDivider();
                 setCorrectDashboardLinksforMobile();
+                if ($("#dashcontent .item tr:not([data-idx])").length) setAllDevicesFeatures();
             });
         });
         var targetNode = document.getElementById("holder");

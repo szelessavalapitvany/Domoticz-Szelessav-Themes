@@ -60,7 +60,7 @@ function searchFunction() {
         if ($("#dashcontent").length || $("#weatherwidgets").length || $("#tempwidgets").length) {
             element = $(this).parent();
         }
-        var visibility = $(this).find("#name").html().toLowerCase().indexOf(value) > -1;
+        var visibility = ($(this).find("#name").html() || "").toLowerCase().indexOf(value) > -1;
         element.toggle(visibility);
     });
     $("div.row.divider").show();
@@ -130,10 +130,10 @@ function setCustomIconsPage() {
 function ajaxSuccessCallback(event, xhr, settings) {
     setPageTitle();
     
-    if (settings.url.startsWith("json.htm?type=devices") || settings.url.startsWith("json.htm?type=scenes")|| settings.url.startsWith("json.htm?type=command&param=getdevice")) {
+    if (settings.url.startsWith("json.htm?type=devices") || settings.url.startsWith("json.htm?type=scenes") || settings.url.startsWith("json.htm?type=command&param=getdevice") || (settings.url.includes("param=getdevices") && settings.url.includes("type=command"))) {
         let counter = 0;
         let intervalId = setInterval(function() {
-            if ($("#main-view").find(".item").length > 0) {
+            if ((window.location.hash.toLowerCase().includes("dashboard") ? $("#dashcontent .item") : $("#main-view .item")).length > 0) {
                 setAllDevicesFeatures();
                 setAllDevicesIconsStatus();
                 clearInterval(intervalId);
@@ -181,3 +181,134 @@ function hexToRGB(h, values_only) {
     else 
         return "rgb("+ +r + "," + +g + "," + +b + ")";
 }
+/* Szélessáv - DSVT Selector automatikus oldalújratöltés */
+
+(function () {
+	const dsvtUnits = [1, 2, 12, 22, 29, 32, 58, 74, 78, 83, 84, 87, 88, 99, 104, 124, 125, 130, 210, 13, 224];
+
+	function dsvtReload() {
+		if (document.getElementById('dsvt-reload-overlay')) return;
+
+		let counter = 15;
+
+		$('body').append(
+			'<div id="dsvt-reload-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);color:white;display:flex;align-items:center;justify-content:center;font-size:2em;z-index:10000;">' +
+			'<span>Refreshed in 15 seconds</span></div>'
+		);
+
+		const interval = setInterval(function () {
+			counter--;
+			$('#dsvt-reload-overlay span').text('Refreshed in ' + counter + ' seconds');
+
+			if (counter <= 0) {
+				clearInterval(interval);
+				window.location.reload();
+			}
+		}, 1000);
+	}
+
+	function initDsvtReload() {
+		if (typeof angular === 'undefined') return false;
+
+		const injector = angular.element(document.body).injector();
+		if (!injector || !injector.has('domoticzApi')) return false;
+
+		const api = injector.get('domoticzApi');
+		if (api._szelessavDsvtWrapped) return true;
+
+		const originalSendCommand = api.sendCommand;
+
+		api.sendCommand = function (command, params) {
+			const result = originalSendCommand.apply(this, arguments);
+
+			if (
+				command === 'switchlight' &&
+				params &&
+				params.switchcmd === 'Set Level' &&
+				params.idx !== undefined
+			) {
+				result.then(function () {
+					$.getJSON('json.htm', {
+						type: 'command',
+						param: 'getdevices',
+						rid: params.idx
+					}).done(function (data) {
+						const device = data.result && data.result[0];
+
+						if (
+							device &&
+							device.HardwareType === 'DSVT + HMV (DHW) + 12 ZONE' &&
+							dsvtUnits.includes(Number(device.Unit))
+						) {
+							dsvtReload();
+						}
+					});
+				});
+			}
+
+			return result;
+		};
+
+		api._szelessavDsvtWrapped = true;
+		return true;
+	}
+
+	const initTimer = setInterval(function () {
+		if (initDsvtReload()) clearInterval(initTimer);
+	}, 500);
+})();
+/* Domoticz 2026 - hiányzó navigációs függvény pótlása */
+if (typeof window.dzNavigateHash !== 'function') {
+	window.dzNavigateHash = function (hash) {
+		if (window.location.hash === hash) {
+			return;
+		}
+
+		window.location.hash = hash;
+	};
+}
+function szelessavWatchDeviceIcons() {
+	if (window.szelessavIconObserver) {
+		window.szelessavIconObserver.disconnect();
+	}
+
+	function updateIcons() {
+		$('#main-view .timers_log a[data-i18n="Log"]:not(:has(i)), #main-view .timers_log a[data-i18n="Timers"]:not(:has(i))')
+			.each(function() {
+				const tr = $(this).closest('tr');
+				let idx = tr.attr('data-idx');
+
+				if (!idx) {
+					idx = tr.closest('.item').attr('id');
+					if (!idx) return;
+
+					tr.attr('data-idx', idx);
+				}
+
+				setDeviceOptions(idx);
+			});
+	}
+
+	window.szelessavIconObserver = new MutationObserver(function() {
+		updateIcons();
+
+		if (window.location.hash.toLowerCase().includes('dashboard')) {
+			const cards = document.querySelectorAll('#dashcontent .item').length;
+			const processed = document.querySelectorAll('#dashcontent .item #timeago').length;
+
+			if (cards > 0 && processed < cards) {
+				setAllDevicesFeatures();
+			}
+		}
+	});
+
+	window.szelessavIconObserver.observe(document.body, {
+		childList: true,
+		subtree: true
+	});
+
+	updateIcons();
+}
+$(function() {
+	szelessavWatchDeviceIcons();
+});
