@@ -2165,7 +2165,8 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	min-height: 620px;
 	max-height: 620px;
 	overflow: auto;
-	white-space: pre-wrap;
+	font-size: 11px;
+	line-height: 16px;
 }
 
 /* felsõ számlálók */
