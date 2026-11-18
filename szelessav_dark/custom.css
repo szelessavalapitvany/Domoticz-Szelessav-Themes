@@ -2291,6 +2291,12 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 #logdata .log-level-error {
 	color:red;
 }
+#logdata .log-level-norm {
+	color:black;
+}
+#logdata .log-level-status {
+	color: blueviolet;
+}
 /* Domoticz 2025/2026 - Scrollable selector buttons */
 @media (min-width: 768px) {
 	#holder .item table[id^="item"] > tbody > tr > td#status:has(.selectorlevelbuttons) {
@@ -2322,4 +2328,24 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	#holder .item .selectorlevelbuttons > button {
 		flex: 0 0 auto;
 	}
+}
+/* Naplószûrõk – kikapcsolt állapot */
+#logcontent .log-filter-btn {
+	background: #e5e5e5 !important;
+	color: #777 !important;
+	border: 1px solid #bbb !important;
+	opacity: 0.65;
+}
+
+/* Naplószûrõk – bekapcsolt állapot */
+#logcontent .log-filter-btn.log-filter-btn-active {
+	background: #007ca8 !important;
+	color: #fff !important;
+	border: 1px solid #00668c !important;
+	opacity: 1;
+}
+
+/* Egérmutató */
+#logcontent .log-filter-btn:hover {
+	opacity: 0.85;
 }
