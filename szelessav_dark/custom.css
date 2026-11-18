@@ -1182,10 +1182,8 @@ button.savebtn:disabled {
 }
 
 .btn-danger {
-    background: rgba(255, 255, 255, .4);
-    border-color: #c74343;
-
-    color: #c74343;
+    background: red;
+    color: #fff;
 }
 
 .btn-danger:hover {
@@ -2286,4 +2284,9 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	box-sizing: border-box;
 	align-self: center;
 	vertical-align: middle;
+	color: #fff;
+	background-color: red;
+}
+#logdata .log-level-error {
+	color:red;
 }
