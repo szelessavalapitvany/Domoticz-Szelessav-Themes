@@ -2219,3 +2219,35 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 #logdata .log-level-error {
 	color:red;
 }
+/* Domoticz 2025/2026 - Scrollable selector buttons */
+@media (min-width: 768px) {
+	#holder .item table[id^="item"] > tbody > tr > td#status:has(.selectorlevelbuttons) {
+		grid-column: 2 / -1;
+		justify-self: stretch;
+		width: auto;
+		min-width: 0;
+		max-width: 100%;
+		margin-left: 5px;
+		margin-right: 10px;
+		overflow: hidden;
+		text-align: left;
+	}
+
+	#holder .item .selectorlevelbuttons {
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		margin: 0;
+		padding: 0;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+		box-sizing: border-box;
+	}
+
+	#holder .item .selectorlevelbuttons > button {
+		flex: 0 0 auto;
+	}
+}
