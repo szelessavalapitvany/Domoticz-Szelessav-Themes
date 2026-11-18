@@ -2216,3 +2216,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	align-self: center;
 	vertical-align: middle;
 }
+#logdata .log-level-error {
+	color:red;
+}
