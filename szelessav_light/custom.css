@@ -25,7 +25,9 @@
   -ms-user-select: unset !important;
   user-select: unset !important;
 }
-
+* {
+	text-shadow: none !important;
+}
 td {
  border: 0px #ccc solid;
 }
@@ -2276,4 +2278,85 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 /* Egérmutató */
 #logcontent .log-filter-btn:hover {
 	opacity: 0.85;
+}
+.ui-widget-content {
+	border: 0px solid #ccc;
+}
+#holder .item select[id^="selector"] {
+	visibility: hidden;
+}
+/* Domoticz 2026 - About page title */
+.about-title {
+	font-family: inherit !important;
+	font-size: 26px !important;
+	font-weight: 600 !important;
+	letter-spacing: normal !important;
+	line-height: 1.3 !important;
+	text-align: center !important;
+	text-transform: none !important;
+	color: #222 !important;
+	text-shadow: none !important;
+	margin: 20px 0 15px !important;
+	padding: 0 !important;
+}
+
+/* Domoticz 2026 - About version */
+.glass-card .version-badge {
+	display: block !important;
+	width: auto !important;
+	background: none !important;
+	background-image: none !important;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	color: #555 !important;
+	font-size: 14px !important;
+	font-weight: normal !important;
+	letter-spacing: normal !important;
+	text-align: center !important;
+	padding: 0 !important;
+	margin: 0 0 15px !important;
+	animation: none !important;
+}
+/* Domoticz 2026 - About system information */
+
+.glass-card {
+	margin:30px;
+}
+
+.glass-card:has(.info-item) > .info-item {
+	display: grid !important;
+	grid-template-columns: 150px max-content !important;
+	column-gap: 20px !important;
+	justify-content: start !important;
+	justify-items: start !important;
+	width: 550px !important;
+	max-width: 100% !important;
+	min-width: 0;
+	margin: 0 auto !important;
+	padding: 0 !important;
+	text-align: left !important;
+}
+
+.glass-card .info-item .info-label,
+.glass-card .info-item .info-value {
+	display: block !important;
+	width: auto !important;
+	margin: 0 !important;
+	white-space: nowrap !important;
+	text-align: left !important;
+	justify-self: start !important;
+}
+
+.glass-card .info-item .info-label {
+	color: #00759f !important;
+}
+
+.glass-card .info-item .info-value {
+	color: #333 !important;
+}
+
+.donation-text {
+  color: #000 !important;
 }
