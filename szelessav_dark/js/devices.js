@@ -152,15 +152,59 @@ function setDeviceOptions(idx) {
 			timers.append($(this).find('.options .btnsmall[data-i18n="Timers"]'));
 			timers.append($(this).find('.options .btnsmall-sel[data-i18n="Timers"]'));
 
-			let icon;
+			/* Favorite - Domoticz 2025 / 2026 */
+			let angularFavorite = subnav.find('[ng-click*="makeFavorite"]');
 
-			if ($(this).find('.options > img[src*="nofavorite"]:not(.ng-hide)').length === 0) {
-				icon = '<i class="ion-ios-star lcursor" title="' + $.t("Remove from Dashboard") + '" onclick="MakeFavorite(' + idx + ',0);"></i>';
+			if (angularFavorite.length) {
+				/* Domoticz 2026 - native Angular favorite handler */
+				let favoriteCell = $('<td class="favorite"></td>').appendTo(this);
+
+				function updateFavoriteIcon() {
+					let original = subnav.find('[ng-click*="makeFavorite"]').first();
+
+					if (!original.length) return;
+
+					let isFavorite = original.attr('ng-click').includes('makeFavorite(0)');
+					let icon = isFavorite ? 'ion-ios-star' : 'ion-ios-star-outline';
+					let title = isFavorite ? $.t("Remove from Dashboard") : $.t("Add to Dashboard");
+
+					favoriteCell.html('<i class="' + icon + ' lcursor" title="' + title + '"></i>');
+				}
+
+				favoriteCell.on('click', 'i', function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+
+					let original = subnav.find('[ng-click*="makeFavorite"]').first().get(0);
+
+					if (original) {
+						original.click();
+					}
+				});
+
+				let favoriteObserver = new MutationObserver(function() {
+					updateFavoriteIcon();
+				});
+
+				favoriteObserver.observe(subnav[0], {
+					childList: true,
+					subtree: true
+				});
+
+				updateFavoriteIcon();
+
 			} else {
-				icon = '<i class="ion-ios-star-outline lcursor" title="' + $.t("Add to Dashboard") + '" onclick="MakeFavorite(' + idx + ',1);"></i>';
-			}
+				/* Domoticz 2025 - legacy favorite handler */
+				let icon;
 
-			$(this).append('<td class="favorite">' + icon + '</td>');
+				if ($(this).find('.options > img[src*="nofavorite"]:not(.ng-hide)').length === 0) {
+					icon = '<i class="ion-ios-star lcursor" title="' + $.t("Remove from Dashboard") + '" onclick="MakeFavorite(' + idx + ',0);"></i>';
+				} else {
+					icon = '<i class="ion-ios-star-outline lcursor" title="' + $.t("Add to Dashboard") + '" onclick="MakeFavorite(' + idx + ',1);"></i>';
+				}
+
+				$(this).append('<td class="favorite">' + icon + '</td>');
+			}
 		}
 
 		/* Napló - csak ha még nincs ikon */
