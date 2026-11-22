@@ -15,23 +15,29 @@ body.dashMobile section.dashCategory div.row.divider:first-of-type {
 }
 
 body.dashMobile section:first-of-type table.mobileitem {
-    margin-top: -20px;
+    margin-top: 0;
 }
 
 body.dashMobile table.mobileitem {
     width: 100%;
     padding: 0;
     margin-top: 10px;
-    /*box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);*/
-	border-radius: 5px;
+    display: block;
+}
+
+body.dashMobile table.mobileitem > thead {
+	display: block;
+	width: 100%;
 }
 
 body.dashMobile table.mobileitem > thead > tr {
-    background: none;
+	background: none;
 }
 
 body.dashMobile table.mobileitem > thead > tr > th:first-of-type {
-    flex-grow: 1;
+	min-width: 0;
+	font-size: 9pt;
+    padding: 8px;
 }
 
 body.dashMobile table.mobileitem th {
@@ -47,7 +53,7 @@ body.dashMobile table.mobileitem th:last-child a {
 }
 
 body.dashMobile table.mobileitem tr {
-    background: #ccc;
+    background: #252c36;
     display: flex;
     flex-grow: 1;
     flex-direction: row;
@@ -120,23 +126,10 @@ body.dashMobile table.mobileitem td.status {
     flex-shrink: 1;
     text-align: end;
 	overflow: auto;
-	width: 50px;
+	width: auto;
 }
 /* Mobile Utility */
 @media (max-width: 767px) {
-
-	body.dashMobile #dashUtility table.mobileitem > thead,
-	body.dashMobile #dashUtility table.mobileitem > thead > tr {
-		display: flex;
-		width: 100%;
-		max-width: 100%;
-		box-sizing: border-box;
-	}
-
-	#topBar {
-		margin: 10px 0 20px;
-	}
-
 	body.dashMobile #dashUtility table.mobileitem,
 	body.dashMobile #dashUtility table.mobileitem > tbody {
 		display: block;
@@ -251,4 +244,122 @@ body.dashMobile table.mobileitem .selectorlevels > select {
 .dashCategory>br {
   height: 0 !important;
   display: none !important;
+}
+/* Domoticz 2026 - Mobile Dashboard */
+.dashboardMobile .mobileitem tbody tr {
+	height: auto !important;
+}
+
+.dashboardMobile .mobileitem td#status {
+	white-space: normal !important;
+	height: auto !important;
+}
+/* Domoticz 2026 - Mobile selector layout */
+@media (max-width: 767px) {
+	.dashboardMobile .mobileitem tbody tr:has(td#status span[ng-repeat] ~ span[ng-repeat]) {
+		display: flex;
+		flex-direction: column;
+		height: auto !important;
+	}
+
+	.dashboardMobile .mobileitem tbody tr:has(td#status span[ng-repeat] ~ span[ng-repeat]) td#name {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.dashboardMobile .mobileitem tbody tr:has(td#status span[ng-repeat] ~ span[ng-repeat]) td#status {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		max-width: none;
+		white-space: normal !important;
+		text-align: right;
+		height: auto !important;
+	}
+}
+@media (max-width: 767px) {
+	.dashboardMobile .mobileitem td#status span[ng-repeat] {
+		display: inline-block;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.dashboardMobile .mobileitem td#status span[ng-repeat] button {
+		margin: 0 !important;
+	}
+}
+@media (max-width: 767px) {
+	.dashboardMobile .mobileitem tbody tr:has(td#status span[ng-repeat] ~ span[ng-repeat]) {
+		min-width: 0;
+	}
+
+	.dashboardMobile .mobileitem tbody tr:has(td#status span[ng-repeat] ~ span[ng-repeat]) td#name {
+		width: 80%;
+		max-width: 80%;
+		min-width: 0;
+		box-sizing: border-box;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+body.dashMobile table.mobileitem thead th a {
+	display: none !important;
+}
+/* Domoticz 2026 - Mobile header width */
+.dashboardMobile table.mobileitem thead tr {
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 0;
+}
+
+.dashboardMobile table.mobileitem thead th {
+	box-sizing: border-box;
+	min-width: 0;
+	max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+
+	table.mobileitem td#status .btn {
+		background: #303844 !important;
+		background-image: none !important;
+		color: #43b6e5 !important;
+		border: none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		font-size: 9pt !important;
+		padding: 5px 10px !important;
+		margin: 0 !important;
+	}
+
+	table.mobileitem td#status .btn.btn-info,
+	table.mobileitem td#status .btn.btn-off-active {
+		background: #00759f !important;
+		color: #fff !important;
+	}
+
+	table.mobileitem td#status .btn:hover {
+		background: #005f82 !important;
+	}
+	#tbFiltRooms {
+		margin-right: 0;
+		float: left !important;
+	}
+	#tbFiltRooms SELECT {
+		width: 100px !important;
+		margin-bottom: 2px;
+	}
+	#tbTimeSun {
+	float: right;
+	width: min-content !important;
+	}
+	#tbFilters {
+	margin-right: 0;
+	width: min-content !important;
+	}
 }
