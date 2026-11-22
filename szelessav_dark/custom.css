@@ -17,9 +17,6 @@
 
 /* vars are now managed in javascript */
 
-a, a:link {
-	  color: #fff;
-}
 .noselect {
   -webkit-touch-callout: unset !important;
   -webkit-user-select: unset !important;
@@ -30,9 +27,12 @@ a, a:link {
 }
 * {
 	text-shadow: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
 }
 td {
- border: 0px #ccc solid;
+ border: 0px #495462 solid;
+ color: #fff;
 }
 
 iframe {
@@ -41,27 +41,20 @@ iframe {
 
 /* Bootbox */
 .bootbox.modal.fade.in {
-    background-color: #fff !important;
+    background-color: #252c36 !important;
 }
-.bootbox-body {
-  color: #fff;
-}
+
 .modal-content {
-    background-color: #000 !important;
+    background-color: #252c36 !important;
 }
 
 .modal-title {
-    color: #fff;
-}
-
-.modal-dialog {
-	background-color: #000 !important;
-	border-top: 1px solid #f1f2f3 !important;
+    color: #e6e9ee;
 }
 
 .modal-footer {
-    border-top: 0px solid #f1f2f3 !important;
-	background-color: #000 !important;
+    border-top: 1px solid #39424e !important;
+    background-color: #252c36 !important;
 }
 /* Add fonts */
 .btnstylerev,
@@ -73,7 +66,7 @@ iframe {
 .item #bigtext,
 .item #type,
 .item #lastupdate {
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 
 h1,
@@ -105,7 +98,9 @@ h4,
 
     object-fit: cover;
 }
-
+a, a:link {
+	  color: #65c5ee;
+}
 .userOn {
     display: block;
     width: 48px;
@@ -115,7 +110,7 @@ h4,
 }
 
 .help-block {
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 
 .disabledText {
@@ -136,11 +131,11 @@ h4,
 
 .lognorm {
     font-weight: bold;
-    color: #fff;
+    color: #e6e9ee;
 }
 
 .logstatus {
-    color: #00759f;
+    color: #43b6e5;
 }
 
 .logerror {
@@ -149,25 +144,23 @@ h4,
 button, input {
 	font-size: 8pt;
 	padding:2px;
-	border: 1px #ccc solid;
+	border: 1px #495462 solid;
 }
 #updelclr {
 	margin-top:5px;
 }
 /* Setpoint popup */
 #setpoint_popup {
-    color: #1a1a1a !important;
+    color: #e6e9ee!important;
     text-shadow: none;
-    background-color: #fff!important;
+    background-color: #252c36!important;
 }
-.bootbox-body {
-  color: #fff !important;
-}
+
 #popup_setpoint {
     font-weight: bold;
-    color: #00759f!important;
-    border-color: #fff!important;
-    background: #fff!important;
+    color: #43b6e5!important;
+    border-color: #3b4654!important;
+    background: #252c36!important;
 }
 
 .ui-close {
@@ -181,7 +174,7 @@ button, input {
 }
 
 .ui-popup.ui-corner-all {
-    background: #fff;
+    background: #252c36;
 
     color: var(--main-item-color);
     border-bottom: none;
@@ -203,7 +196,7 @@ display: none;
 
 #searchInput {
     color: #fff;
-    border-color: #fff;
+    border-color: #3b4654;
 }
 
 #searchInput::placeholder {
@@ -253,9 +246,9 @@ display: none;
 }
 
 .msg {
-    background-color: #fff;
+    background-color: #252c36;
     font-weight: bold;
-    color: #1a1a1a;
+    color: #e6e9ee;
 
     z-index: 99;
     display: block;
@@ -267,7 +260,7 @@ display: none;
 }
 
 .msg span {
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 
 input[type="number"] {
@@ -277,13 +270,12 @@ input[type="number"] {
 input[type="text"],
 input[type="input"],
 input[type="number"],
-input[type="password"],
 input[type="email"],
-textarea, .ui-widget-content textarea {
-    color: #000;
+input[type="password"] {
+    background-color: transparent;
     outline: 0;
-	border: 0px solid #ccc;
-	background-color: #fff !important;
+	border: 1px solid #495462;
+    color: #e6e9ee;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -295,11 +287,10 @@ input[type="checkbox"], input[type="radio"] {
     width: 14px;
     margin-right: 8px;
     position: relative;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: #252c36;
+    border: 1px solid #495462;
     outline: none;
 }
-
 
 input[type="checkbox"]:disabled, 
 input[type="radio"]:disabled {
@@ -327,7 +318,7 @@ input[type="radio"]:checked::before {
 /*need ofix media screen*/
 #timesun {
     margin-top: -30px;
-    color: #ccc !important;
+    color: #e6e9ee !important;
 }
 
 #timesun font {
@@ -336,7 +327,7 @@ input[type="radio"]:checked::before {
 }
 
 #timesun font:before {
-    color: #1a1a1a !important;
+    color: #e6e9ee !important;
     content: "\f4b7";
     font-family: "Ionicons";
     font-size: 14px;
@@ -413,16 +404,16 @@ div.bannercontent .row.divider {
     width: 370px;
     height: 100%;
 }
-/* doboz */
+
 #holder .row .item table[id^="item"] > tbody > tr,
 #settings .row-fluid > div {
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 	background-size: 10px 35px;
-	border: 1px solid #808080;
+	background-color: #252c36;
+	border: 1px solid #495462;
     border-radius: 0px;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-	background-color: gray;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
 #dashSwitches table > thead > tr, #dashSwitches #itemtablesmall > tbody > tr, #lightcontent #itemtablenostatus > tbody > tr, #itemtabletrippleicon > tbody > tr {
 	background-image: url("images/blue_bg.png") !important;
@@ -525,7 +516,7 @@ div.bannercontent .row.divider {
 
 /* last update */
 .item #lastupdate {
-	color: #1a1a1a;
+	color: #e6e9ee;
 	grid-area: lastupdate;
 	justify-self: right;
 	align-self: center;
@@ -536,7 +527,7 @@ div.bannercontent .row.divider {
 }
 /* type */
 .item #type {
-    color: #fff;
+    color: #e6e9ee;
     grid-area: img2-start;
     justify-self: left;
     align-self: center;
@@ -547,7 +538,7 @@ div.bannercontent .row.divider {
 
 .item #status,
 .item .status {
-    color: #fff;
+    color: #e6e9ee;
     grid-area: status;
     padding-right: 20px;
     align-self: center;
@@ -556,7 +547,8 @@ div.bannercontent .row.divider {
     max-height: 60px;
 	white-space: normal;
     overflow-y: auto;
-	font-size: 80%;
+    scrollbar-width: thin;
+    scrollbar-color: #43b6e5 #252c36;
 }
 
 
@@ -569,10 +561,14 @@ div.bannercontent .row.divider {
 }
 
 .item .btn-group {
-
     width: 100%;
 }
 
+.item .btn-group::-webkit-scrollbar-thumb,
+.item #status::-webkit-scrollbar-thumb,
+.item .status::-webkit-scrollbar-thumb {
+    background: #00759f;
+}
 
 /* item subnav applying by click*/
 .options-cell {
@@ -594,15 +590,14 @@ body table#itemtable tr > .options {
     display: none;
     font-weight: bold;
     position: absolute;
-    background: #fff;
-
+    background: #252c36;
     right: 5px;
     top: 8px;
     box-shadow: -2px 2px 20px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 8px;
     width: 97px;
-	border: 1px #ccc solid;
+	border: 1px #495462 solid;
 }
 
 .options > img {
@@ -618,7 +613,7 @@ body table#itemtable tr > .options {
 .options .btnsmall {
     padding-top: 4px;
     text-align: left;
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 
 .favorite {
@@ -626,6 +621,7 @@ body table#itemtable tr > .options {
     margin-left: 10px !important;
     font-size: 16px;
     line-height: 16px;
+    color: #43b6e5;
 }
 
 .timers_log {
@@ -641,6 +637,7 @@ body table#itemtable tr > .options {
     padding: 0 5px;
     font-size: 16px;
     line-height: 16px;
+    color: #43b6e5;
 }
 
 /* images */
@@ -703,14 +700,15 @@ body table#itemtable tr > .options {
 }
 
 .selectorlevels {
-    font-size: 15px;
+    font-size: 10pt;
     text-align: right;
+	font-weight:normal !important;
     margin-top: 0 !important;
 }
 
 .selectorlevels > select {
     padding: 5px;
-    color: #00759f !important;
+    color: #43b6e5 !important;
     outline: 0;
     max-width: 100%;
 }
@@ -720,10 +718,8 @@ body table#itemtable tr > .options {
     padding: 0;
 }
 
-/* Time Ago */
-
-
 .item #timeago {
+    color: #e6e9ee;
     font-size: 80%;
     grid-area: lastupdate;
     justify-self: right;
@@ -732,7 +728,6 @@ body table#itemtable tr > .options {
 
 /* dashboard items */
 #dashcontent .lastupdate {
-
 	bottom: 5px;
 	position: absolute;
 	font-weight:normal;
@@ -742,9 +737,7 @@ body table#itemtable tr > .options {
 .input .dimslider,
 .statusNormal .dimslider,
 .statusProtected .dimslider {
-
-    border: 1px solid #ccc;
-
+    border: 1px solid #495462;
     box-shadow: none;
     height: 5px;
     right: 20px;
@@ -767,7 +760,6 @@ body table#itemtable tr > .options {
     width: 15px;
     height: 15px;
     background: #00759f;
-
     top: -5px;
 }
 
@@ -778,8 +770,8 @@ body table#itemtable tr > .options {
 }
 
 body {
-    background: #000 !important;
-    color: #fff;
+    background: #171c23 !important;
+    color: #e6e9ee;
 }
 
 html.cover {
@@ -840,22 +832,18 @@ div.menu-toggle {
 .menu-toggle:after, 
 .menu-toggle:before, 
 .menu-toggle div {
-    background-color: #ddd;
-
+    background-color: #303844;
     content: '';
     display: block;
     height: 4px;
     margin: 6px 0;
-
 top: 10px;
 position: relative;
 }
 
 div.menu-toggle.scrolled {
     background: #00759f;
-
     padding: 0 5px 15px 5px;
-
 }
 
 .navbar-inverse .navbar-inner.slide + .menu-toggle:before {
@@ -874,36 +862,33 @@ div.menu-toggle.scrolled {
     border: none;
 	box-shadow:none;
 	padding: 0;
-	background-color: #000 !important;
+	background-color: #303844;
 }
-.current_page_item {
-	background-color: #ccc;
-}
+
 .navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
     margin: 0;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     bottom: 5px;
-    border-top-color: #fff;
-    border-bottom-color: #fff;
+    border-top-color: #e6e9ee;
+    border-bottom-color: #e6e9ee;
 }
 
 .navbar-inverse .nav li.dropdown > a:hover .caret,
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret {
-    border-top-color: #1a1a1a;
-    border-bottom-color: #1a1a1a;
+    border-top-color: #e6e9ee;
+    border-bottom-color: #e6e9ee;
 }
 
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle:before {
-    background: #fff; 
-    color: #1a1a1a;
+    background: transparent; 
+    color: #e6e9ee;
 }
 
 /* Navbar move abit to left */
 .navbar .nav {
-
     float: none;
 }
 
@@ -926,14 +911,15 @@ div.menu-toggle.scrolled {
     text-shadow: none;
     font-size: 10pt;
     background-color: transparent;
-    color: #ccc;
+    color: #e6e9ee;
     border: 0 !important;
     position: relative;
 }
 
 .navbar .nav li a:hover {
-    color: #000;
-    background: #ccc;
+    color: #e6e9ee;
+    background: #252c36;
+    border: 1px #3b4654 solid;
 }
 
 .navbar .nav > li > .dropdown-menu:after {
@@ -958,36 +944,30 @@ div.menu-toggle.scrolled {
 
 .navbar .nav .dropdown-menu {
     border: none;
-    background: #fff;
+    background: #252c36;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .pull-right > li > .dropdown-menu .dropdown-menu,
 .navbar .nav > li > .dropdown-menu.pull-right .dropdown-menu {
-    background: #fff !important;
+    background: #252c36 !important;
 }
 
 .navbar .nav .current_page_item > a,
 .navbar .nav .current_page_item > a:hover,
 .navbar-inverse .nav > li > a:focus {
     text-shadow: none;
-    color: #1a1a1a;
+    color: #e6e9ee;
     background-image: none;
-    background-color: #000;
+    background-color: inherit;
 }
 
 .current_page_item > a,
 .navbar .nav .current_page_item > a:hover,
 .navbar-inverse .nav > li > a:focus {
     text-shadow: none;
-    color: #1a1a1a;
-    background-color: #fff;
-}
-
-.navbar .nav .current_page_item > a {
-    text-shadow: none;
-    color: #1a1a1a;
-    background-color: #fff;
+    color: #e6e9ee;
+    background-color: #303844;
 }
 
 .nav li a img {
@@ -1000,7 +980,7 @@ div.menu-toggle.scrolled {
     background: none;
     border: none;
     border-bottom: 0px solid transparent;
-    color: #ccc;
+    color: #e6e9ee;
     cursor: pointer;
 }
 
@@ -1024,14 +1004,13 @@ div.menu-toggle.scrolled {
 .sub-tabs .sub-tabs-apply:hover {
     background-color: #00759f;
     border: none !important;
-
     color: #fff;
 }
 
 .btnstylerev,
 .btnstyle {
     background: none;
-    color: #ccc;
+    color: #e6e9ee;
 }
 
 a.btnstylerev,
@@ -1067,7 +1046,7 @@ a.btnstyle {
     position: relative;
     overflow: visible;
     margin-left: 16px;
-    color: #ccc;
+    color: #e6e9ee;
 }
 
 
@@ -1076,26 +1055,24 @@ a.btnstyle {
 .resetbtn:hover {
     background-color: #c74343;
     border: 2px solid #c74343 !important;
-
     color: #fff;
     padding: 10px 20px;
 }
 
 button.resetbtn:active {
-    border: 2px solid #fff !important;
+    border: 2px solid #3b4654 !important;
 }
 
 .savebtn,
 .savebtn:hover {
     background-color: #00759f;
     border: 2px solid #00759f !important;
-
     color: #fff;
     padding: 10px 20px;
 }
 
 button.savebtn:active {
-    border: 2px solid #fff !important;
+    border: 2px solid #3b4654 !important;
 }
 
 button.savebtn:disabled {
@@ -1112,17 +1089,15 @@ button.savebtn:disabled {
     padding: 2px 5px;
 }
 .btn-mini {
-    background: #eee;
+    background: #303844;
     border: 0;
-    color: #00759f;
-
+    color: #43b6e5;
 }
 
 .btn-primary, .btn-primary[disabled] {
     background: none;
     border-color: #00759f;
-    color: #00759f !important;
-
+    color: #43b6e5 !important;
     text-shadow: none;
 }
 
@@ -1131,14 +1106,12 @@ button.savebtn:disabled {
     background-color: #00759f;
     border-color: #00759f;
     color: #fff !important;
-
 }
 
 .btn-success {
     background: none;
     border-color: #5bb75b;
     color: #5bb75b;
-
 }
 
 .btn-success:hover {
@@ -1146,14 +1119,12 @@ button.savebtn:disabled {
     background-color: #5bb75b;
     border-color: #5bb75b;
     color: #fff !important;
-
 }
 
 .btn-warning {
     background: none;
     border-color: #FF8C00;
     color: #FF8C00 !important;
-
 }
 
 .btn-warning:hover {
@@ -1161,7 +1132,6 @@ button.savebtn:disabled {
     background-color: #FF8C00;
     border-color: #FF8C00;
     color: #fff !important;
-
 }
 
 .btn-info {
@@ -1176,7 +1146,6 @@ button.savebtn:disabled {
     background: #00759f;
     border-color: #00759f;
     color: #fff !important;
-
 }
 
 .btn-info:visited {
@@ -1184,8 +1153,10 @@ button.savebtn:disabled {
 }
 
 .btn-danger {
-    background: red;
-    color: #fff;
+    background: rgba(255, 255, 255, .4);
+    border-color: #c74343;
+    color: #c74343;
+	text-shadow: none;
 }
 
 .btn-danger:hover {
@@ -1193,12 +1164,11 @@ button.savebtn:disabled {
     background-color: #c74343;
     border-color: #c74343;
     color: #fff;
-
 }
 
 .btnsmall,
 .btnsmall:hover {
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 .btnsmall:hover {
     font-style: italic;
@@ -1221,18 +1191,18 @@ button.savebtn:disabled {
 .dataTables_wrapper .dataTables_length, 
 .dataTables_wrapper .dataTables_filter,
 .dataTables_wrapper .dataTables_info {
-    color: #fff;
+    color: #e6e9ee;
 }
 
 .dataTables_wrapper .ui-widget-header .ui-state-default {
     background: transparent;
     border: none !important;
-    color: #fff !important;
+    color: #e6e9ee !important;
 }
 
 table.dataTable thead th {
-    background: #fefefe;
-    color: #000;
+    background: #2b333e;
+    color: #e6e9ee;
     height: 35px;
     padding-right: 10px;
     text-align: -webkit-left;
@@ -1246,19 +1216,15 @@ table.dataTable thead th {
 .dataTables_wrapper tr.odd,
 .dataTables_wrapper tr.even {
     height: 35px;
-    background-color: #ccc;
+    background-color: #303844;
 }
 
 .dataTables_wrapper tr.odd {
-    background-color: #eeeeee6b;
+    background-color: #303844;
 }
 
 .dataTables_wrapper tr.even {
-    background-color: #eeeeeec4;
-}
-
-tr.even, tr.odd {
-  color: #fff !important;
+    background-color: #252c36;
 }
 
 tr.odd td.sorting_1, tr.even td.sorting_1 {
@@ -1267,28 +1233,21 @@ tr.odd td.sorting_1, tr.even td.sorting_1 {
 
 .dataTables_wrapper table tbody tr.odd.row_selected td,
 .dataTables_wrapper table tbody tr.even.row_selected td {
-    background: #00759f !important;
-	color: #fff !important;
+    background: #3b4857 !important;
+    opacity: .75;
+	color: #fff;
 }
 
-.row_selected {
-    background-color: #00759f;
-}
 
 .btnstyle3:disabled {
     cursor: not-allowed;
     background: gray;
-
 }
 
 h1,
 h2,
 h2 span {
-    color: #fff !important;
-}
-
-device-temperature-log h1, device-temperature-log h2, device-temperature-log h2 span {
-    color: #ccc !important;
+    color: #e6e9ee !important;
 }
 
 body table#itemtabledoubleicon tr td:first-child {
@@ -1307,20 +1266,17 @@ body table#itemtabledoubleicon .wrapper {
 div#hardwarecontent,div#cameracontent,div#devicecontent,div#logcontent {
     width: auto;
 }
-
 .tab-content {
   margin: 20px auto;
 }
-
 .devices-filters__group-title {
     border-color: #00759f;
-    background-color: #fff;
-    color: #1a1a1a;
+    background-color: #252c36;
+    color: #e6e9ee;
 }
 
 .label, .badge {
     font-weight: bold;
-
     background-color: #dd0000;
     text-align: center;
     color: #fff;
@@ -1334,17 +1290,16 @@ div#hardwarecontent,div#cameracontent,div#devicecontent,div#logcontent {
 }
 
 .ui-dialog {
-    background: #fff !important;
+    background: #303844 !important;
     z-index: 9999 !important;
 }
 
 .ui-dialog-buttonset button {
+    font-weight: normal;
     background: #00759f !important;
     color: white !important;
     border: none !important;
     border-radius: 0 !important;
-	padding: 2px 12px;
-	font-weight: normal;
 }
 
 #getlatlong {
@@ -1365,22 +1320,18 @@ input#AcceptNewHardware:checked ~ button {
     background: none;
     background-color: #00759f;
     color: #fff;
-
     border: none;
 }
 
 .ui-corner-all {
-	background: #fff;
-	border-radius: 0;
-	border: none;
-	border: 0px solid #ccc;
-	color: #1a1a1a;
-	outline: none;
-	padding: 2px;
+    background: none;
+    border-radius: 0;
+    border: none;
+    border: 1px solid #495462;
+    color: #e6e9ee;
+    outline: none;
 }
-.ui-widget-header .ui-icon {
-  background-color: #666;
-}
+
 select.ui-corner-all option {
     background: var(--main-navbar-bg-color);
 }
@@ -1391,8 +1342,8 @@ select.ui-corner-all option {
 /* Popups */
 
 .list-group-item, .list-group-item:link {
-    background: #fff;
-    color: #1a1a1a;
+    background: #252c36;
+    color: #e6e9ee;
 }
 
 #offline {
@@ -1413,7 +1364,7 @@ select.ui-corner-all option {
 }
 
 .ui-widget-header {
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 
 .btnsmall,.btnsmall-sel {
@@ -1441,11 +1392,11 @@ select.ui-corner-all option {
 
 /* Device has low battery */
 .item.statusLowBattery tr {
-    box-shadow: 0px 0px 10px 2px rgb(255,255,0,0.4) !important;
+    box-shadow: 0px rgb(255,255,0,0.4) !important;
 }
 
 .item.statusLowBattery tr:hover {
-    box-shadow: 0px 0px 0px 2px rgb(255,255,0) !important;
+    box-shadow: 0px rgb(255,255,0) !important;
 }
 
 @keyframes blinker {
@@ -1465,8 +1416,7 @@ select.ui-corner-all option {
 }
 
 #login:before {
-
-	background-color: #fff;
+	background-color: #252c36;
 	background-position: top,center;
 	background-repeat: no-repeat;
     text-align: center;
@@ -1494,14 +1444,14 @@ select.ui-corner-all option {
 #login #inputs input[type=text], #login #inputs input[type=password] {
     border: none;
     box-shadow: none !important;
-    background: #fff;
-    border-bottom: 1px solid #ccc;
-    color: #1a1a1a;
+    background: #252c36;
+    border-bottom: 1px solid #495462;
+    color: #e6e9ee;
 }
 
 #login #inputs input[type=text]:focus, #login #inputs input[type=password]:focus {
     border-bottom: 1px solid #00759f;
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 
 #login fieldset {
@@ -1514,7 +1464,7 @@ select.ui-corner-all option {
 #login #submit {
     background-image: none;
     background-color: #00759f;
-	border: 0px solid #fff !important;
+	border: 0px solid #3b4654 !important;
     color: #fff;
     border: none;
     text-shadow: none;
@@ -1524,9 +1474,9 @@ select.ui-corner-all option {
 .btn-group .btn {
     margin: 0px !important;
     text-shadow: none !important;
-    color: #1a1a1a;
+    color: #e6e9ee;
     border: none !important;
-	border-left: 1px #aaa solid !important;
+	border-left: 1px #536170 solid !important;
 }
 
 .btn-group > .btn:first-child,
@@ -1537,9 +1487,9 @@ select.ui-corner-all option {
 
 .btn-default,
 .btn-group .btn-default {
-	background: #eee;
+	background: #303844;
 	
-    color: #00759f !important;
+    color: #43b6e5 !important;
     text-shadow: none;
 }
 
@@ -1550,16 +1500,12 @@ select.ui-corner-all option {
 	color: #fff !important;
 	background: #00759f;
     border-color: transparent !important;
-
 }
-
-
 
 .btn-group .btn-danger {
     background: none !important;
     border-color: #c74343 !important;
     color: #c74343;
-
 }
 
 .btn-group .btn-danger:hover {
@@ -1604,17 +1550,16 @@ select.ui-corner-all option {
 }
 
 .ui-selectmenu-text {
-    color: #00759f;
+    color: #43b6e5;
     font-weight: bold;
     font-weight: 600;
 	text-align: right;
-	font-size: 10pt;
 }
 
 .selectorlevels-menu {
     border-color: #00759f !important;
-    color: #1a1a1a;
-    background: #fff;
+    color: #e6e9ee;
+    background: #252c36;
 }
 
 @media (max-width: 767px) {
@@ -1631,15 +1576,11 @@ font-size: 8pt;
 }
 
 #copyright p {
-    color: #1a1a1a;
+    color: #e6e9ee;
 }
 
 #copyright p a {
-    color: #00759f;
-}
-/* author at footer */
-#copyright p:after {
-    content: "  | Szelessav Muhely theme";
+    color: #43b6e5;
 }
 
 /* Compact mode */
@@ -1674,7 +1615,7 @@ section.compact .row.divider {
 }
 
 .span3 #status {
-    color: #00759f;
+    color: #43b6e5;
 }
 
 .span3 td.input {
@@ -1707,7 +1648,7 @@ section.compact .row.divider {
 }
 
 .span3 td.input .btn-group button.btn-selected {
-    color: #00759f !important;
+    color: #43b6e5 !important;
     font-weight: bold;
     font-size: 1rem;
     font-weight: 600;
@@ -1768,14 +1709,13 @@ section.compact .row.divider {
     color: inherit;
 	font-weight: normal;
 	font-size: 10pt;
-	background: #ccc !important;
 }
 .ui-draggable .ui-dialog-titlebar {
   background-color: #00759f;
   color: #fff;
 }
 .ui-widget-content {
-  background: gray !important;
+  background: #252c36 !important;
  }
  .dropdown-menu .divider {
   height: 0;
@@ -1801,7 +1741,7 @@ section.compact .row.divider {
   cursor: pointer;
   background: url('images/handle.png') no-repeat 50% 50%;
   font-weight: bold;
-  color: #1C94C4;
+  color: #65c5ee;
   border-style: none;
   outline: none;
   top: -7px;
@@ -1814,7 +1754,7 @@ section.compact .row.divider {
   display:inline-block;
 }
  .navbar .nav > li > .dropdown-menu.pull-right {
-	  background-color: #fff;
+	  background-color: #252c36;
 }
 #holder > .container-fluid {
   padding: 0 !important;
@@ -1824,9 +1764,8 @@ section.compact .row.divider {
   width: fit-content;
 }
 form[name="deviceInfoForm"], timer-form, device-text-log-table, #hardwarecontent {
-	border: 0px #ccc solid;
-	background-color: #000;
-	color: #fff;
+	border: 1px #495462 solid;
+	background-color: #252c36;
 	padding: 10px;
 	display: block;
 }
@@ -1835,8 +1774,8 @@ table.table-details > tbody > tr > td:first-child {
   text-align: right;
 }
 #devicecontainer {
-	background-color: #fafafa !important;
-	border: 1px #eee solid !important;
+	background-color: #171c23 !important;
+	border: 1px #39424e solid !important;
 }
 .highcharts-root {
 	width:fit-content;
@@ -1847,9 +1786,6 @@ table.table-details > tbody > tr > td:first-child {
 }
 .navbar-fixed-top {
 	position: unset;
-}
-#tbLinks {
-  display: none;
 }
 .btn {
 	font-size: inherit;
@@ -1867,8 +1803,8 @@ li {
   line-height: 2.00em;
   text-decoration: none;
   text-transform: none;
-  font-size: 1em;
-  color: #FFFFFF;
+  font-size: 10pt;
+  color: #FFFFFF !important;
   outline: none;
   cursor: pointer;
 }
@@ -1882,14 +1818,11 @@ li {
   line-height: 2.00em;
   text-decoration: none;
   text-transform: none;
-  font-size: 1em;
-  color: #FFFFFF;
+  font-size: 10pt;
+  color: #FFFFFF !important;
   outline: none;
   cursor: pointer;
-}
-#topBar {
-	min-height: 40px !important;
-	color: #fff;
+  float:right;
 }
 .path {
     fill: red;
@@ -1905,7 +1838,6 @@ li {
 }
 .dropdown-menu li a {
 	padding:6px !important;
-	color: #000 !important;
 }
 #hardwareparamstable tr td:first-child,
 table.plugin tr td:first-child,
@@ -1914,7 +1846,10 @@ table.plugin input {
 }
 td.status {
 	overflow: unset !important;
-	width: auto !important;
+	
+}
+#tbLinks {
+	display: none;
 }
 #main-view {
 	width:100%;
@@ -1922,11 +1857,11 @@ td.status {
 .header-text {
 	color:#fff;
 }
-.btnstyle3, .btn-danger {
-	float: right;
+.btnstyle3, btnstyle3-dis, btnstyle3-sel .btn-danger {
+	float: right !important;
 }
 .btn {
-	line-height: unset !important;
+	line-height: 18px !important;
 }
 #actual_value, #popup_setpoint {
 	font-size: 18px !important;
@@ -1950,6 +1885,10 @@ td.status {
 }
 .myrighttable td {
 	text-align: left;
+}
+#topBar {
+	min-height: 40px !important;
+	font-size: 9pt;
 }
 /* Public mode: Domoticz logo and title */
 html:not(.szelessav-firmware) .navbar-inner {
@@ -1986,19 +1925,17 @@ html:not(.szelessav-firmware) .brand h1 {
     display: block !important;
     margin: 0 !important;
     font-size: 24px !important;
-    color: #1a1a1a !important;
+    color: #e6e9ee !important;
     line-height: 46px !important;
 }
 
 html:not(.szelessav-firmware) .brand h2 {
     display: none !important;
 }
-
-/* Domoticz 2026 login */
 #canvas-login {
 	display: none !important;
 }
-/* Domoticz 2026 login - centered panel */
+
 #canvas-login + .glass-container {
 	display: flex !important;
 	align-items: center;
@@ -2015,7 +1952,7 @@ html:not(.szelessav-firmware) .brand h2 {
 #canvas-login + .glass-container .glass-card {
 	margin: 0 auto;
 }
-/* Domoticz 2026 login - input fields */
+
 #canvas-login + .glass-container input.glass-input {
 	display: block;
 	box-sizing: border-box;
@@ -2023,10 +1960,10 @@ html:not(.szelessav-firmware) .brand h2 {
 	height: 44px;
 	margin-bottom: 10px;
 	padding: 10px 8px;
-	background: #fff;
-	color: #1a1a1a;
+	background: #252c36;
+	color: #e6e9ee;
 	border: none;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #495462;
 	border-radius: 0;
 	box-shadow: none;
 }
@@ -2036,13 +1973,13 @@ html:not(.szelessav-firmware) .brand h2 {
 	outline: none;
 	box-shadow: none;
 }
-/* Domoticz 2026 login - Remember me */
+
 #canvas-login + .glass-container .remember-row,
 #canvas-login + .glass-container .remember-row label {
-	color: #1a1a1a !important;
+	color: #e6e9ee !important;
 	text-shadow: none;
 }
-/* Domoticz 2026 login - button */
+
 #canvas-login + .glass-container .btn-modern {
 	display: block;
 	width: 120px !important;
@@ -2060,61 +1997,55 @@ html:not(.szelessav-firmware) .brand h2 {
 #canvas-login + .glass-container .btn-modern:hover {
 	background: #005f82 !important;
 }
-/* Domoticz 2026 - Szelessav firmware login logo */
+
 html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 	content: url("images/logo.png");
-	display: block;
-	box-sizing: border-box;
-	width: calc(100% + 60px) !important;
-	max-width: none !important;
-	height: 110px !important;
-	margin: -25px -30px 35px !important;
-	padding: 25px 85px;
-	background: #fff;
+	width: 152px !important;
+	height: 50px !important;
 	object-fit: contain;
+	margin: 0 auto 20px;
 }
 
-/* Hide factory branding in firmware mode */
 html.szelessav-firmware #canvas-login + .glass-container .login-title,
 html.szelessav-firmware #canvas-login + .glass-container .domoticz-link {
 	display: none !important;
 }
-/* Domoticz 2026 - Szelessav login panel */
+
 #canvas-login + .glass-container .glass-card {
 	box-sizing: border-box;
 	width: 360px;
 	max-width: calc(100vw - 32px);
 	padding: 25px 30px 40px;
-	background: gray !important;
+	background: #252c36 !important;
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
 	backdrop-filter: none;
 	-webkit-backdrop-filter: none;
 }
-/* Domoticz 2026 - login logo spacing */
+
 html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 	margin-bottom: 45px;
 }
-/* Domoticz 2026 - Hide top navigation icons */
+
 .navbar .nav > li > a > i,
 .navbar .nav > li > a > .fa,
 .navbar .nav > li > a > .fas,
 .navbar .nav > li > a > .far {
 	display: none !important;
 }
-/* Domoticz 2026 - Hide dropdown menu icons */
+
 .navbar .dropdown-menu a > img.dz-nav-img,
 .navbar .dropdown-menu a > i.dz-nav-glyph,
 .navbar .dropdown-menu a > i.fa {
 	display: none !important;
 }
-/* Domoticz 2026 - Dashboard kapcsolok kek fejlece */
+
 #dashcontent .movable[id^="light_"] #itemtablesmall > tbody > tr,
 #dashcontent .movable[id^="light_"] #itemtablesmalldoubleicon > tbody > tr {
 	background-image: url("images/blue_bg.png") !important;
 }
-/* Domoticz 2026 - Dashboard category spacing */
+
 #holder #dashcontent > section.dashCategory {
 	margin: 0 0 16px;
 	padding: 0;
@@ -2132,7 +2063,7 @@ html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 	margin: 0;
 	padding: 0;
 }
-/* Domoticz 2026 - Dashboard card spacing */
+
 @media (min-width: 900px) {
 	#holder #dashcontent > section.dashCategory > .row {
 		display: grid;
@@ -2152,11 +2083,11 @@ html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 		min-width: 0;
 	}
 }
-/* Domoticz 2026 - Temperature card headers */
+
 #holder #dashcontent #dashTemp #itemtablesmall > tbody > tr {
 	background-image: url("images/red_bg.png") !important;
 }
-/* Domoticz 2026 - Kapcsolók fejléc */
+
 #lightcontent .item tr {
 	background-image: linear-gradient(
 		to bottom,
@@ -2165,28 +2096,28 @@ html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 		transparent 30px
 	);
 }
-/* Domoticz 2026 - Kapcsolók kártyáinak térköze */
+
 #lightcontent .item.span4, #utilitycontent .item.span4 {
 	margin-left: 8px !important;
 	margin-right: 8px !important;
 	margin-bottom: 8px !important;
 }
-/* Domoticz 2026 - duplikált kedvencek gomb elrejtése */
+
 .itemBlock .options .fa-star {
 	display: none !important;
 }
-/* Domoticz 2026 - Adatbázis mentés/helyreállítás szövegszínek */
+
 #dbsize_display,
 #dbfreesize_display,
 span[style*="color:#fff"][style*="font-weight:bold"] {
-	color: #333 !important;
+	color: #dce1e7 !important;
 }
-/* Domoticz 2026 - redõnyök duplikált vezérlõikonjainak elrejtése */
+
 #itemtablesmalldoubleicon .dz-blind-glyph,
 #itemtabledoubleicon .dz-blind-glyph {
 	display: none !important;
 }
-/* Domoticz 2026 - Log page layout fix */
+
 #logcontent,
 #notificationcontent {
 	max-width: 1100px;
@@ -2194,14 +2125,12 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	padding: 20px 0 30px 0;
 }
 
-/* felsõ fejléc / gombsor */
 #logcontent .row,
 #notificationcontent .row {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 }
 
-/* filter + counters + buttons egy sorban */
 #logcontent input[type="text"],
 #notificationcontent input[type="text"] {
 	max-width: 220px;
@@ -2213,7 +2142,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	margin-bottom: 6px;
 }
 
-/* log panel */
 #logcontent textarea,
 #notificationcontent textarea,
 #logcontent pre,
@@ -2224,12 +2152,11 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 #notificationcontent #logdata {
 	width: 100% !important;
 	box-sizing: border-box;
-	background: #fff;
-	border: 1px solid #cfcfcf;
+	background: #252c36;
+	border: 1px solid #495462;
 	padding: 10px;
 }
 
-/* scrollos log ablak */
 #logcontent pre,
 #notificationcontent pre,
 #logcontent #logdata,
@@ -2241,7 +2168,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	line-height: 16px;
 }
 
-/* felsõ számlálók */
 #logcontent .label,
 #notificationcontent .label,
 #logcontent .badge,
@@ -2249,14 +2175,13 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	margin-left: 6px;
 }
 
-/* táblázatos / toolbar elemek ne ússzanak szét */
 #logcontent [class*="span"],
 #notificationcontent [class*="span"] {
 	float: none !important;
 	display: inline-block;
 	vertical-align: top;
 }
-/* Domoticz 2026 - Log toolbar */
+
 #logcontent .log-toolbar {
 	display: grid;
 	grid-template-columns: auto minmax(180px, 1fr) auto auto;
@@ -2275,7 +2200,7 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	height:25px;
 	box-sizing: border-box;
 }
-/* Domoticz 2026 - Clear log button */
+
 #logcontent .log-toolbar > .btn-danger {
 	display: flex;
 	align-items: center;
@@ -2287,19 +2212,18 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	box-sizing: border-box;
 	align-self: center;
 	vertical-align: middle;
-	color: #fff;
-	background-color: red;
+	font-size: 10pt;
 }
 #logdata .log-level-error {
 	color:red;
 }
 #logdata .log-level-norm {
-	color:black;
+	color: #e6e9ee;
 }
 #logdata .log-level-status {
 	color: blueviolet;
 }
-/* Domoticz 2025/2026 - Scrollable selector buttons */
+
 @media (min-width: 768px) {
 	#holder .item table[id^="item"] > tbody > tr > td#status:has(.selectorlevelbuttons) {
 		grid-column: 2 / -1;
@@ -2331,15 +2255,14 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 		flex: 0 0 auto;
 	}
 }
-/* Naplószûrõk – kikapcsolt állapot */
+
 #logcontent .log-filter-btn {
-	background: #e5e5e5 !important;
-	color: #777 !important;
-	border: 1px solid #bbb !important;
+	background: #343d49 !important;
+	color: #aeb8c4 !important;
+	border: 1px solid #536170 !important;
 	opacity: 0.65;
 }
 
-/* Naplószûrõk – bekapcsolt állapot */
 #logcontent .log-filter-btn.log-filter-btn-active {
 	background: #007ca8 !important;
 	color: #fff !important;
@@ -2347,14 +2270,30 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	opacity: 1;
 }
 
-/* Egérmutató */
 #logcontent .log-filter-btn:hover {
 	opacity: 0.85;
+}
+.ui-widget-content {
+	border: 0px solid #495462;
 }
 #holder .item select[id^="selector"] {
 	visibility: hidden;
 }
-/* Domoticz 2026 - About version */
+
+.about-title {
+	font-family: inherit !important;
+	font-size: 26px !important;
+	font-weight: 600 !important;
+	letter-spacing: normal !important;
+	line-height: 1.3 !important;
+	text-align: center !important;
+	text-transform: none !important;
+	color: #e6e9ee !important;
+	text-shadow: none !important;
+	margin: 20px 0 15px !important;
+	padding: 0 !important;
+}
+
 .glass-card .version-badge {
 	display: block !important;
 	width: auto !important;
@@ -2364,7 +2303,7 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	border-radius: 0 !important;
 	box-shadow: none !important;
 	text-shadow: none !important;
-	color: #fff !important;
+	color: #b9c4d1 !important;
 	font-size: 14px !important;
 	font-weight: normal !important;
 	letter-spacing: normal !important;
@@ -2373,7 +2312,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	margin: 0 0 15px !important;
 	animation: none !important;
 }
-/* Domoticz 2026 - About system information */
 
 .glass-card {
 	margin:30px;
@@ -2404,13 +2342,242 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 }
 
 .glass-card .info-item .info-label {
-	color: #00759f !important;
+	color: #43b6e5 !important;
 }
 
 .glass-card .info-item .info-value {
-	color: #ccc !important;
+	color: #dce1e7 !important;
 }
 
 .donation-text {
+  color: #e6e9ee !important;
+}
+#tbSunGroup {
+  font-size: 9pt !important;
+  color: #e6e9ee !important;
+}
+
+.navbar .nav > li > a {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 10pt !important;
+	font-weight: bold !important;
+	padding: 10px 8px !important;
+}
+
+.movable {
+	height: auto !important;
+}
+
+.navbar .nav .dropdown-menu {
+	background: #252c36 !important;
+	border: 1px solid #495462;
+	border-top: none;
+}
+
+.navbar .nav .dropdown-menu li a {
+	color: #e6e9ee !important;
+	background: transparent !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-weight: bold !important;
+}
+
+.navbar .nav .dropdown-menu li.current_page_item > a,
+.navbar .nav .dropdown-menu li.current_page_item > a:hover,
+.navbar .nav .dropdown-menu li.current_page_item > a:focus,
+.navbar .nav .dropdown-menu li > a:hover,
+.navbar .nav .dropdown-menu li > a:focus {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	color: #e6e9ee !important;
+	border: none !important;
+	outline: none !important;
+}
+
+.page-content-container {
+	background: #252c36 !important;
+	color: #e6e9ee !important;
+}
+/* Setup almenü hover és aktív állapot */
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	color: #e6e9ee !important;
+	background: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+#restorecontent .glass-card {
+	background: #252c36 !important;
+	color: #e6e9ee !important;
+}
+
+#restorecontent .glass-card .section-title,
+#restorecontent .glass-card p,
+#restorecontent .glass-card label,
+#restorecontent .glass-card span {
+	color: #e6e9ee !important;
+}
+#restorecontent button:disabled {
+	background: #343d49 !important;
+	background-image: none !important;
+	color: #aeb8c4 !important;
+	opacity: 1 !important;
+	border: 1px solid #495462 !important;
+	box-shadow: none !important;
+	cursor: not-allowed;
+}
+#restorecontent button:not(:disabled) {
+	background: #00759f !important;
+	background-image: none !important;
+	color: #fff !important;
+	opacity: 1 !important;
+	border: 1px solid #00759f !important;
+	box-shadow: none !important;
+}
+
+#restorecontent button:not(:disabled):hover {
+	background: #005f82 !important;
+}
+textarea {
+  border: 1px #495462 solid !important;
+}
+
+html, body {
+	background-color: #171c23 !important;
+	color: #e6e9ee !important;
+}
+body, .bannercontent, #main-view, #holder {
+	color: #e6e9ee;
+}
+.navbar-inverse .navbar-inner {
+	background-color: #252c36 !important;
+}
+.navbar .nav .dropdown-menu,
+.navbar .pull-right > li > .dropdown-menu .dropdown-menu,
+.navbar .nav > li > .dropdown-menu.pull-right .dropdown-menu {
+	background: #252c36 !important;
+	border-color: #495462 !important;
+}
+.navbar .nav .dropdown-menu li a,
+.navbar .nav .dropdown-menu li.current_page_item > a,
+.navbar .nav .dropdown-menu li.current_page_item > a:hover,
+.navbar .nav .dropdown-menu li.current_page_item > a:focus,
+.navbar .nav .dropdown-menu li > a:hover,
+.navbar .nav .dropdown-menu li > a:focus {
+	color: #e6e9ee !important;
+	background: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	outline: none !important;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	color: #e6e9ee !important;
+	background: transparent !important;
+	background-image: none !important;
+}
+.page-content-container,
+#restorecontent .glass-card {
+	background: #252c36 !important;
+	color: #e6e9ee !important;
+}
+#restorecontent .glass-card .section-title,
+#restorecontent .glass-card p,
+#restorecontent .glass-card label,
+#restorecontent .glass-card span {
+	color: #e6e9ee !important;
+}
+#restorecontent button:disabled {
+	background: #343d49 !important;
+	color: #aeb8c4 !important;
+	border: 1px solid #495462 !important;
+}
+#restorecontent button:not(:disabled) {
+	background: #00759f !important;
+	color: #fff !important;
+	border: 1px solid #00759f !important;
+}
+#restorecontent button:not(:disabled):hover {
+	background: #005f82 !important;
+}
+#canvas-login + .glass-container .glass-card,
+.bootbox.modal.fade.in,
+.modal-content,
+.modal-footer,
+.ui-popup.ui-corner-all {
+	background: #252c36 !important;
+	color: #e6e9ee !important;
+}
+#canvas-login + .glass-container input.glass-input,
+input[type="text"], input[type="input"], input[type="number"],
+input[type="email"], input[type="password"], textarea, select {
+	background-color: #202730;
+	color: #e6e9ee;
+	border-color: #495462;
+}
+#canvas-login + .glass-container .btn-modern,
+.ui-dialog-buttonset button,
+#getlatlong {
+	background: #00759f !important;
+	color: #fff !important;
+}
+#holder .row .item table[id^="item"] > tbody > tr,
+#settings .row-fluid > div {
+	background-color: #252c36;
+	border-color: #495462;
+}
+.item.itemBlock {
+	border: 1px solid #495462 !important;
+}
+#holder #dashcontent .movable {
+	height: auto !important;
+}
+#holder .item #name,
+#holder .item #bigtext,
+#holder .item .options-cell {
+	color: #fff;
+}
+#holder .item #lastupdate,
+#holder .item #type,
+#holder .item #status,
+#holder .item .status,
+#holder .item #timeago {
+	color: #e6e9ee;
+}
+#logdata .log-level-norm,
+.lognorm {
+	color: #e6e9ee;
+}
+#dbsize_display,
+#dbfreesize_display,
+span[style*="color:#fff"][style*="font-weight:bold"] {
+	color: #e6e9ee !important;
+}
+tr.odd {
   color: #fff !important;
+}
+#logcontent {
+	background: #171c23 !important;
+	border-color: #495462 !important;
+}
+
+#logcontent .log-toolbar,
+#logcontent .log-statusbar {
+	background: #303844 !important;
+	color: #e6e9ee !important;
+	border-color: #495462 !important;
+}
+
+#tbTimeSun .fa-sun {
+	margin-left: 8px;
+	color: #aeb8c4;
 }
