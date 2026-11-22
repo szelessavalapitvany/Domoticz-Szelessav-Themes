@@ -15,7 +15,7 @@ body.dashMobile section.dashCategory div.row.divider:first-of-type {
 }
 
 body.dashMobile section:first-of-type table.mobileitem {
-    margin-top: -10px;
+    margin-top: 0;
 }
 
 body.dashMobile table.mobileitem {
@@ -35,8 +35,9 @@ body.dashMobile table.mobileitem > thead > tr {
 }
 
 body.dashMobile table.mobileitem > thead > tr > th:first-of-type {
-	flex: 1 1 0;
 	min-width: 0;
+	font-size: 9pt;
+    padding: 8px;
 }
 
 body.dashMobile table.mobileitem th {
@@ -321,4 +322,44 @@ body.dashMobile table.mobileitem thead th a {
 	box-sizing: border-box;
 	min-width: 0;
 	max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+
+	table.mobileitem td#status .btn {
+		background: #eee !important;
+		background-image: none !important;
+		color: #00759f !important;
+		border: none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		font-size: 9pt !important;
+		padding: 5px 10px !important;
+		margin: 0 !important;
+	}
+
+	table.mobileitem td#status .btn.btn-info,
+	table.mobileitem td#status .btn.btn-off-active {
+		background: #00759f !important;
+		color: #fff !important;
+	}
+
+	table.mobileitem td#status .btn:hover {
+		background: #005f82 !important;
+	}
+	#tbFiltRooms {
+		margin-right: 0;
+		float: left !important;
+	}
+	#tbFiltRooms SELECT {
+		width: 100px !important;
+		margin-bottom: 2px;
+	}
+	#tbTimeSun {
+	float: right;
+	width: min-content !important;
+	}
+	#tbFilters {
+	margin-right: 0;
+	width: min-content !important;
+	}
 }
