@@ -27,6 +27,8 @@
 }
 * {
 	text-shadow: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
 }
 td {
  border: 0px #ccc solid;
@@ -1800,7 +1802,7 @@ li {
   line-height: 2.00em;
   text-decoration: none;
   text-transform: none;
-  font-size: 1em;
+  font-size: 10pt;
   color: #FFFFFF !important;
   outline: none;
   cursor: pointer;
@@ -1815,7 +1817,7 @@ li {
   line-height: 2.00em;
   text-decoration: none;
   text-transform: none;
-  font-size: 1em;
+  font-size: 10pt;
   color: #FFFFFF !important;
   outline: none;
   cursor: pointer;
@@ -1885,6 +1887,7 @@ td.status {
 }
 #topBar {
 	min-height: 40px !important;
+	font-size: 9pt;
 }
 /* Public mode: Domoticz logo and title */
 html:not(.szelessav-firmware) .navbar-inner {
@@ -1928,12 +1931,10 @@ html:not(.szelessav-firmware) .brand h1 {
 html:not(.szelessav-firmware) .brand h2 {
     display: none !important;
 }
-
-/* Domoticz 2026 login */
 #canvas-login {
 	display: none !important;
 }
-/* Domoticz 2026 login - centered panel */
+
 #canvas-login + .glass-container {
 	display: flex !important;
 	align-items: center;
@@ -1950,7 +1951,7 @@ html:not(.szelessav-firmware) .brand h2 {
 #canvas-login + .glass-container .glass-card {
 	margin: 0 auto;
 }
-/* Domoticz 2026 login - input fields */
+
 #canvas-login + .glass-container input.glass-input {
 	display: block;
 	box-sizing: border-box;
@@ -1971,13 +1972,13 @@ html:not(.szelessav-firmware) .brand h2 {
 	outline: none;
 	box-shadow: none;
 }
-/* Domoticz 2026 login - Remember me */
+
 #canvas-login + .glass-container .remember-row,
 #canvas-login + .glass-container .remember-row label {
 	color: #1a1a1a !important;
 	text-shadow: none;
 }
-/* Domoticz 2026 login - button */
+
 #canvas-login + .glass-container .btn-modern {
 	display: block;
 	width: 120px !important;
@@ -1995,7 +1996,7 @@ html:not(.szelessav-firmware) .brand h2 {
 #canvas-login + .glass-container .btn-modern:hover {
 	background: #005f82 !important;
 }
-/* Domoticz 2026 - Szelessav firmware login logo */
+
 html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 	content: url("images/logo.png");
 	width: 152px !important;
@@ -2004,12 +2005,11 @@ html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 	margin: 0 auto 20px;
 }
 
-/* Hide factory branding in firmware mode */
 html.szelessav-firmware #canvas-login + .glass-container .login-title,
 html.szelessav-firmware #canvas-login + .glass-container .domoticz-link {
 	display: none !important;
 }
-/* Domoticz 2026 - Szelessav login panel */
+
 #canvas-login + .glass-container .glass-card {
 	box-sizing: border-box;
 	width: 360px;
@@ -2022,29 +2022,29 @@ html.szelessav-firmware #canvas-login + .glass-container .domoticz-link {
 	backdrop-filter: none;
 	-webkit-backdrop-filter: none;
 }
-/* Domoticz 2026 - login logo spacing */
+
 html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 	margin-bottom: 45px;
 }
-/* Domoticz 2026 - Hide top navigation icons */
+
 .navbar .nav > li > a > i,
 .navbar .nav > li > a > .fa,
 .navbar .nav > li > a > .fas,
 .navbar .nav > li > a > .far {
 	display: none !important;
 }
-/* Domoticz 2026 - Hide dropdown menu icons */
+
 .navbar .dropdown-menu a > img.dz-nav-img,
 .navbar .dropdown-menu a > i.dz-nav-glyph,
 .navbar .dropdown-menu a > i.fa {
 	display: none !important;
 }
-/* Domoticz 2026 - Dashboard kapcsolok kek fejlece */
+
 #dashcontent .movable[id^="light_"] #itemtablesmall > tbody > tr,
 #dashcontent .movable[id^="light_"] #itemtablesmalldoubleicon > tbody > tr {
 	background-image: url("images/blue_bg.png") !important;
 }
-/* Domoticz 2026 - Dashboard category spacing */
+
 #holder #dashcontent > section.dashCategory {
 	margin: 0 0 16px;
 	padding: 0;
@@ -2062,7 +2062,7 @@ html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 	margin: 0;
 	padding: 0;
 }
-/* Domoticz 2026 - Dashboard card spacing */
+
 @media (min-width: 900px) {
 	#holder #dashcontent > section.dashCategory > .row {
 		display: grid;
@@ -2082,11 +2082,11 @@ html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 		min-width: 0;
 	}
 }
-/* Domoticz 2026 - Temperature card headers */
+
 #holder #dashcontent #dashTemp #itemtablesmall > tbody > tr {
 	background-image: url("images/red_bg.png") !important;
 }
-/* Domoticz 2026 - Kapcsolók fejléc */
+
 #lightcontent .item tr {
 	background-image: linear-gradient(
 		to bottom,
@@ -2095,28 +2095,28 @@ html.szelessav-firmware #canvas-login + .glass-container .login-logo {
 		transparent 30px
 	);
 }
-/* Domoticz 2026 - Kapcsolók kártyáinak térköze */
+
 #lightcontent .item.span4, #utilitycontent .item.span4 {
 	margin-left: 8px !important;
 	margin-right: 8px !important;
 	margin-bottom: 8px !important;
 }
-/* Domoticz 2026 - duplikált kedvencek gomb elrejtése */
+
 .itemBlock .options .fa-star {
 	display: none !important;
 }
-/* Domoticz 2026 - Adatbázis mentés/helyreállítás szövegszínek */
+
 #dbsize_display,
 #dbfreesize_display,
 span[style*="color:#fff"][style*="font-weight:bold"] {
 	color: #333 !important;
 }
-/* Domoticz 2026 - redõnyök duplikált vezérlõikonjainak elrejtése */
+
 #itemtablesmalldoubleicon .dz-blind-glyph,
 #itemtabledoubleicon .dz-blind-glyph {
 	display: none !important;
 }
-/* Domoticz 2026 - Log page layout fix */
+
 #logcontent,
 #notificationcontent {
 	max-width: 1100px;
@@ -2124,14 +2124,12 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	padding: 20px 0 30px 0;
 }
 
-/* felsõ fejléc / gombsor */
 #logcontent .row,
 #notificationcontent .row {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 }
 
-/* filter + counters + buttons egy sorban */
 #logcontent input[type="text"],
 #notificationcontent input[type="text"] {
 	max-width: 220px;
@@ -2143,7 +2141,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	margin-bottom: 6px;
 }
 
-/* log panel */
 #logcontent textarea,
 #notificationcontent textarea,
 #logcontent pre,
@@ -2159,7 +2156,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	padding: 10px;
 }
 
-/* scrollos log ablak */
 #logcontent pre,
 #notificationcontent pre,
 #logcontent #logdata,
@@ -2171,7 +2167,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	line-height: 16px;
 }
 
-/* felsõ számlálók */
 #logcontent .label,
 #notificationcontent .label,
 #logcontent .badge,
@@ -2179,14 +2174,13 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	margin-left: 6px;
 }
 
-/* táblázatos / toolbar elemek ne ússzanak szét */
 #logcontent [class*="span"],
 #notificationcontent [class*="span"] {
 	float: none !important;
 	display: inline-block;
 	vertical-align: top;
 }
-/* Domoticz 2026 - Log toolbar */
+
 #logcontent .log-toolbar {
 	display: grid;
 	grid-template-columns: auto minmax(180px, 1fr) auto auto;
@@ -2205,7 +2199,7 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	height:25px;
 	box-sizing: border-box;
 }
-/* Domoticz 2026 - Clear log button */
+
 #logcontent .log-toolbar > .btn-danger {
 	display: flex;
 	align-items: center;
@@ -2217,6 +2211,7 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	box-sizing: border-box;
 	align-self: center;
 	vertical-align: middle;
+	font-size: 10pt;
 }
 #logdata .log-level-error {
 	color:red;
@@ -2227,7 +2222,7 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 #logdata .log-level-status {
 	color: blueviolet;
 }
-/* Domoticz 2025/2026 - Scrollable selector buttons */
+
 @media (min-width: 768px) {
 	#holder .item table[id^="item"] > tbody > tr > td#status:has(.selectorlevelbuttons) {
 		grid-column: 2 / -1;
@@ -2259,7 +2254,7 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 		flex: 0 0 auto;
 	}
 }
-/* Naplószûrõk – kikapcsolt állapot */
+
 #logcontent .log-filter-btn {
 	background: #e5e5e5 !important;
 	color: #777 !important;
@@ -2267,7 +2262,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	opacity: 0.65;
 }
 
-/* Naplószûrõk – bekapcsolt állapot */
 #logcontent .log-filter-btn.log-filter-btn-active {
 	background: #007ca8 !important;
 	color: #fff !important;
@@ -2275,7 +2269,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	opacity: 1;
 }
 
-/* Egérmutató */
 #logcontent .log-filter-btn:hover {
 	opacity: 0.85;
 }
@@ -2285,7 +2278,7 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 #holder .item select[id^="selector"] {
 	visibility: hidden;
 }
-/* Domoticz 2026 - About page title */
+
 .about-title {
 	font-family: inherit !important;
 	font-size: 26px !important;
@@ -2300,7 +2293,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	padding: 0 !important;
 }
 
-/* Domoticz 2026 - About version */
 .glass-card .version-badge {
 	display: block !important;
 	width: auto !important;
@@ -2319,7 +2311,6 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 	margin: 0 0 15px !important;
 	animation: none !important;
 }
-/* Domoticz 2026 - About system information */
 
 .glass-card {
 	margin:30px;
@@ -2359,4 +2350,113 @@ span[style*="color:#fff"][style*="font-weight:bold"] {
 
 .donation-text {
   color: #000 !important;
+}
+#tbSunGroup {
+  font-size: 9pt !important;
+  color: #1a1a1a !important;
+}
+
+.navbar .nav > li > a {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 10pt !important;
+	font-weight: bold !important;
+	padding: 10px 8px !important;
+}
+
+.movable {
+	height: auto !important;
+}
+
+.navbar .nav .dropdown-menu {
+	background: #fff !important;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.navbar .nav .dropdown-menu li a {
+	color: #1a1a1a !important;
+	background: transparent !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-weight: bold !important;
+}
+
+.navbar .nav .dropdown-menu li.current_page_item > a,
+.navbar .nav .dropdown-menu li.current_page_item > a:hover,
+.navbar .nav .dropdown-menu li.current_page_item > a:focus,
+.navbar .nav .dropdown-menu li > a:hover,
+.navbar .nav .dropdown-menu li > a:focus {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	color: #1a1a1a !important;
+	border: none !important;
+	outline: none !important;
+}
+
+.page-content-container {
+	background: #fff !important;
+	color: #1a1a1a !important;
+}
+/* Setup almenü hover és aktív állapot */
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	color: #1a1a1a !important;
+	background: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+#restorecontent .glass-card {
+	background: #fff !important;
+	color: #1a1a1a !important;
+}
+
+#restorecontent .glass-card .section-title,
+#restorecontent .glass-card p,
+#restorecontent .glass-card label,
+#restorecontent .glass-card span {
+	color: #1a1a1a !important;
+}
+#restorecontent button:disabled {
+	background: #e5e5e5 !important;
+	background-image: none !important;
+	color: #777 !important;
+	opacity: 1 !important;
+	border: 1px solid #ccc !important;
+	box-shadow: none !important;
+	cursor: not-allowed;
+}
+#restorecontent button:not(:disabled) {
+	background: #00759f !important;
+	background-image: none !important;
+	color: #fff !important;
+	opacity: 1 !important;
+	border: 1px solid #00759f !important;
+	box-shadow: none !important;
+}
+
+#restorecontent button:not(:disabled):hover {
+	background: #005f82 !important;
+}
+textarea {
+  border: 1px #ccc solid !important;
+}
+#logcontent {
+	background: #fafafa !important;
+	border-color: #ccc !important;
+}
+
+#logcontent .log-toolbar,
+#logcontent .log-statusbar {
+	background: #eee !important;
+	color: #1a1a1a !important;
+	border-color: #ccc !important;
+}
+#tbTimeSun .fa-sun {
+  margin-left: 8px;
+  color: gray;
 }
