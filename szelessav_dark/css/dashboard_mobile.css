@@ -326,9 +326,9 @@ body.dashMobile table.mobileitem thead th a {
 @media screen and (max-width: 768px) {
 
 	table.mobileitem td#status .btn {
-		background: #303844 !important;
+		background: #eee !important;
 		background-image: none !important;
-		color: #43b6e5 !important;
+		color: #00759f !important;
 		border: none !important;
 		border-radius: 0 !important;
 		box-shadow: none !important;
@@ -351,15 +351,57 @@ body.dashMobile table.mobileitem thead th a {
 		float: left !important;
 	}
 	#tbFiltRooms SELECT {
-		width: 100px !important;
+		width: 90px !important;
 		margin-bottom: 2px;
 	}
 	#tbTimeSun {
-	float: right;
-	width: min-content !important;
+		width: 190px;
+		display: inline-block;
+		margin-left: 10px;
 	}
 	#tbFilters {
 	margin-right: 0;
 	width: min-content !important;
 	}
+	#holder .row dzweatherwidget, #holder .row dztemperaturewidget, #holder .row .span4, #holder .row .tile, #holder .row .item, #holder .row .item section, #holder .row .item table[id^="item"], #holder .row .item table[id^="item"] > tbody, #holder .row .item table[id^="item"] > tbody > tr {
+		width: 100% !important;
+	}
 }
+body.dashMobile table.mobileitem tr:has(.selectorlevels-mobile-wrap) {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: stretch !important;
+	height: auto !important;
+}
+
+body.dashMobile table.mobileitem tr:has(.selectorlevels-mobile-wrap) td#name {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
+	white-space: normal !important;
+	padding: 10px !important;
+}
+
+body.dashMobile table.mobileitem tr:has(.selectorlevels-mobile-wrap) td#status {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
+	padding: 0 15px 15px !important;
+	text-align: left !important;
+}
+
+body.dashMobile table.mobileitem .selectorlevels-mobile-wrap {
+	display: block !important;
+	width: 100% !important;
+}
+
+body.dashMobile table.mobileitem select.selectorlevels-mobile {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
+	margin: 0 !important;
+}
+
