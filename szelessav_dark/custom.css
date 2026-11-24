@@ -2581,3 +2581,41 @@ tr.odd {
 	margin-left: 8px;
 	color: #aeb8c4;
 }
+#dashcontent {
+  background: none !important;
+}
+#dashcontent {
+	background: none !important;
+}
+
+#dashcontent #emain {
+	width: 100% !important;
+	max-width: 100% !important;
+	height: 250px !important;
+	box-sizing: border-box !important;
+}
+
+#dashcontent #emain > svg {
+	width: 100% !important;
+	height: 350px !important;
+	display: block;
+}
+
+#emain #ltext {
+	left: 50% !important;
+	width: 300px !important;
+	height: auto !important;
+	transform: translateX(-50%) !important;
+	text-align: center !important;
+	overflow: visible !important;
+}
+
+#emain #ltext-inner {
+	position: relative !important;
+	width: 100% !important;
+	font-size: 10pt !important;
+	line-height: 1.4 !important;
+	transform: none !important;
+	text-align: center !important;
+	white-space: normal !important;
+}
