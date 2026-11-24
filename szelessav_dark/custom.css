@@ -401,8 +401,6 @@ div.bannercontent .row.divider {
     display: block;
     margin: 0;
     padding: 0;
-    width: 370px;
-    height: 137px;
 }
 
 #holder .row .item table[id^="item"] > tbody > tr,
